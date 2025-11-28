@@ -96,7 +96,7 @@ Add new project cards in the projects section:
 ## Contact
 
 - Email: manasamadabushi@gmail.com
-- LinkedIn: [Manasa Rajagopal Madabushi](https://linkedin.com/in/manasa-rajagopal-madabushi-👩‍💻-4217461b3)
+- LinkedIn: [Manasa Rajagopal Madabushi](https://www.linkedin.com/in/manasa-rajagopal-madabushi-4217461b3)
 - GitHub: [manasa123104](https://github.com/manasa123104)
 
 ## License
