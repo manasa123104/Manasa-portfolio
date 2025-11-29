@@ -36,6 +36,13 @@ body {
     color: var(--text-primary);
     background-color: var(--bg-primary);
     overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 .container {
@@ -1405,6 +1412,36 @@ section {
 }
 
 /* Responsive Design */
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.5rem !important;
+    }
+    
+    .hero-title .name {
+        font-size: 1.25rem !important;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem !important;
+    }
+    
+    .project-card-large .project-title {
+        font-size: 1.25rem !important;
+    }
+    
+    .project-content-large {
+        padding: 1rem !important;
+    }
+    
+    .project-image-large {
+        min-height: 200px !important;
+    }
+    
+    .project-image-large .project-placeholder {
+        font-size: 3rem !important;
+    }
+}
+
 @media (max-width: 768px) {
     .nav-menu {
         position: fixed;
@@ -1480,19 +1517,62 @@ section {
     }
     
     .project-card-large {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr !important;
+        min-height: auto !important;
     }
     
     .project-image-large {
-        min-height: 250px;
+        min-height: 250px !important;
+        width: 100% !important;
     }
     
     .project-content-large {
-        padding: 2rem;
+        padding: 1.5rem !important;
     }
     
     .project-card-large .project-title {
-        font-size: 1.5rem;
+        font-size: 1.5rem !important;
+        line-height: 1.3 !important;
+    }
+    
+    .project-description {
+        font-size: 0.95rem !important;
+    }
+    
+    .section-header {
+        text-align: center;
+    }
+    
+    .section-title {
+        font-size: 2rem !important;
+    }
+    
+    .container {
+        padding: 0 1rem !important;
+    }
+    
+    .projects {
+        padding: 3rem 0 !important;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .tech-tag {
+        font-size: 0.75rem !important;
+        padding: 0.4rem 0.8rem !important;
+    }
+    
+    .project-tech {
+        flex-wrap: wrap;
+        gap: 0.5rem;
     }
 
     .footer-content {
