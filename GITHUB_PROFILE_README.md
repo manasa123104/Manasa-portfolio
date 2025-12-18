@@ -58,7 +58,7 @@ Passionate about building innovative solutions with **Machine Learning**, **AI**
 - 🌉 **Bridge Condition Analysis** - Big Data analysis using PySpark & Databricks
 
 ### 📚 Education
-- **MS in Data Analytics Engineering** - George Mason University (GPA: 3.81)
+- **MS in Data Analytics Engineering** - George Mason University (GPA: 3.83)
 - **BTech in Computer Science** - CVR College of Engineering
 
 ### 🌐 Connect with Me
