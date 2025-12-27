@@ -1,0 +1,19 @@
+# Ignore OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Ignore editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Keep all portfolio files
+!*.html
+!*.css
+!*.js
+!*.md
+!images/
+
