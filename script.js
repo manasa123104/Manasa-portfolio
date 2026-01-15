@@ -106,27 +106,6 @@ document.querySelectorAll('section').forEach(section => {
     observer.observe(section);
 });
 
-// Contact form handling
-const contactForm = document.getElementById('contactForm');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(contactForm);
-        const name = formData.get('name');
-        const email = formData.get('email');
-        const message = formData.get('message');
-        
-        // Here you would typically send this to a server
-        // For now, we'll just show an alert
-        alert(`Thank you ${name}! Your message has been received. I'll get back to you at ${email} soon!`);
-        
-        // Reset form
-        contactForm.reset();
-    });
-}
-
 // Add active class to nav link based on scroll position
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
