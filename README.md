@@ -65,33 +65,10 @@ Add new project cards in the projects section:
 </div>
 ```
 
-## Deployment
 
-### Quick Deploy Options:
 
-#### Option 1: GitHub Pages (Recommended - Free)
-1. Create a new **public** repository on GitHub named `portfolio`
-2. Push all files to the repository
-3. Go to Settings → Pages → Select `main` branch → Save
-4. Your site will be live at: `https://YOUR_USERNAME.github.io/portfolio/`
 
-**See `DEPLOY_TO_GITHUB_PAGES.md` for detailed step-by-step instructions.**
 
-#### Option 2: Netlify (Easiest - Free)
-1. Go to [netlify.com](https://www.netlify.com) and sign up
-2. Drag and drop the `portfolio` folder
-3. Your site goes live instantly with a custom URL!
-
-#### Option 3: Vercel (Fast - Free)
-1. Go to [vercel.com](https://vercel.com) and sign up
-2. Import your GitHub repository
-3. Deploy with one click
-
-### Files Ready for Deployment:
-- ✅ All HTML files (index.html, education.html, experience.html, certifications.html)
-- ✅ CSS and JavaScript files
-- ✅ Images folder
-- ✅ No build process required - ready to deploy!
 
 ## Contact
 
