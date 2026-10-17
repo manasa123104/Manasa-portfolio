@@ -95,7 +95,7 @@ const observer = new IntersectionObserver((entries) => {
 // Observe all sections except projects (which should be visible immediately)
 document.querySelectorAll('section').forEach(section => {
     // Skip projects section - keep it visible
-    if (section.id === 'projects') {
+    if (section.id === 'projects' || section.id === 'gallery') {
         section.style.opacity = '1';
         section.style.transform = 'translateY(0)';
         return;
@@ -142,4 +142,50 @@ style.textContent = `
     }
 `;
 document.head.appendChild(style);
+
+const galleryFilters = document.querySelectorAll('.gallery-filter');
+const frames = document.querySelectorAll('.gallery-wall .frame');
+const lightbox = document.getElementById('lightbox');
+
+galleryFilters.forEach(button => {
+    button.addEventListener('click', () => {
+        const filter = button.dataset.filter;
+        galleryFilters.forEach(item => {
+            const selected = item === button;
+            item.classList.toggle('is-active', selected);
+            item.setAttribute('aria-selected', selected ? 'true' : 'false');
+        });
+        frames.forEach(frame => {
+            const show = filter === 'all' || frame.dataset.album === filter;
+            frame.classList.toggle('is-hidden', !show);
+        });
+    });
+});
+
+if (lightbox) {
+    const photo = lightbox.querySelector('img');
+    const caption = lightbox.querySelector('figcaption');
+    const closeLightbox = () => {
+        lightbox.hidden = true;
+        photo.removeAttribute('src');
+    };
+
+    frames.forEach(frame => {
+        frame.addEventListener('click', () => {
+            const image = frame.querySelector('img');
+            photo.src = frame.dataset.full;
+            photo.alt = image.alt;
+            caption.textContent = image.alt;
+            lightbox.hidden = false;
+        });
+    });
+
+    lightbox.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', event => {
+        if (event.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && !lightbox.hidden) closeLightbox();
+    });
+}
 
