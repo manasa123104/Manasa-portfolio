@@ -584,6 +584,11 @@ section {
     line-height: 1.8;
 }
 
+.about-text a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
 .about-stats {
     display: flex;
     gap: 2rem;
