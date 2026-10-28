@@ -2608,6 +2608,7 @@ section {
 }
 
 .dialog-card {
+    margin: auto;
     background: #181b1f;
     color: #ccccdc;
     border: 1px solid #2c3235;
