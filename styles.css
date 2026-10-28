@@ -578,6 +578,10 @@ section {
     color: var(--text-primary);
 }
 
+.about-text h3:not(:first-child) {
+    margin-top: 2rem;
+}
+
 .about-text p {
     color: var(--text-secondary);
     margin-bottom: 1rem;
