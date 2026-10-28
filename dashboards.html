@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboards - Manasa Rajagopal Madabushi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <a href="index.html" style="text-decoration: none; color: inherit;"></a>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home" class="nav-link">Home</a></li>
+                <li><a href="index.html#about" class="nav-link">About</a></li>
+                <li><a href="education.html" class="nav-link">Education</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
+                <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+                <li><a href="index.html#projects" class="nav-link">Projects</a></li>
+                <li><a href="dashboards.html" class="nav-link active">Dashboards</a></li>
+                <li><a href="index.html#skills" class="nav-link">Skills</a></li>
+                <li><a href="index.html#gallery" class="nav-link">Gallery</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="dashboards-page">
+        <div class="dashboards-shell">
+            <section id="browser">
+                <div class="dashboards-header">
+                    <div>
+                        <h1>Dashboards</h1>
+                        <p>Search, star, and open boards. Starred ones stay in this browser.</p>
+                    </div>
+                </div>
+                <div class="dashboards-toolbar">
+                    <input id="dashboard-search" class="dashboards-search" type="search" placeholder="Search dashboards and panel titles" aria-label="Search dashboards">
+                    <button id="starred-filter" class="starred-toggle" type="button" aria-pressed="false">Starred</button>
+                </div>
+                <div id="tag-row" class="tag-row"></div>
+                <div id="dashboard-results"></div>
+            </section>
+            <section id="board" hidden>
+                <div class="board-toolbar">
+                    <button id="board-back" class="dashboard-back" type="button">All dashboards</button>
+                    <div class="board-title">
+                        <h1 id="board-name"></h1>
+                        <button id="board-star" class="star-button" type="button" aria-label="Star dashboard">☆</button>
+                    </div>
+                </div>
+                <div id="panel-grid" class="panel-grid"></div>
+            </section>
+        </div>
+    </main>
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+        navToggle.addEventListener('click', () => navMenu.classList.toggle('active'));
+        document.querySelectorAll('.nav-link').forEach((link) => {
+            link.addEventListener('click', () => navMenu.classList.remove('active'));
+        });
+
+        const dashboards = [
+            {
+                id: 'analytics-overview',
+                name: 'Analytics Overview',
+                folder: 'Analytics',
+                tags: ['analytics', 'kpi'],
+                panels: [
+                    { type: 'stat', title: 'Active models', value: '12' },
+                    { type: 'stat', title: 'Data freshness', value: '4 min' },
+                    { type: 'stat', title: 'Questions answered', value: '860' },
+                    { type: 'stat', title: 'Open incidents', value: '1' },
+                    { type: 'line', title: 'Requests', color: '#5794f2', values: [40, 48, 45, 62, 70, 66, 80, 92, 88, 104] },
+                    { type: 'line', title: 'Error rate', color: '#ff9830', values: [2.1, 1.8, 2.4, 1.6, 1.2, 1.4, 0.9, 1.1, 0.8, 0.7] }
+                ]
+            },
+            {
+                id: 'geoweaver',
+                name: 'GeoWeaver Earth AI',
+                folder: 'Research',
+                tags: ['geospatial', 'nasa'],
+                panels: [
+                    { type: 'stat', title: 'Workflows', value: '28' },
+                    { type: 'stat', title: 'NASA reports', value: '6' },
+                    { type: 'stat', title: 'Pipelines healthy', value: '96%' },
+                    { type: 'stat', title: 'Scenes queued', value: '14' },
+                    { type: 'line', title: 'Pipeline runs', color: '#73bf69', values: [12, 14, 13, 18, 17, 21, 19, 24, 22, 26] },
+                    { type: 'bar', title: 'Scenes processed', color: '#b877d9', values: [30, 42, 38, 55, 49, 61, 58, 70] }
+                ]
+            },
+            {
+                id: 'giggso-ml',
+                name: 'Giggso Model Operations',
+                folder: 'Machine Learning',
+                tags: ['mlops', 'ai'],
+                panels: [
+                    { type: 'stat', title: 'Models shipped', value: '7' },
+                    { type: 'stat', title: 'Inference p95', value: '180 ms' },
+                    { type: 'stat', title: 'Successful jobs', value: '99%' },
+                    { type: 'stat', title: 'Drift alerts', value: '2' },
+                    { type: 'line', title: 'Predictions', color: '#5794f2', values: [120, 140, 132, 160, 188, 176, 210, 240, 228, 260] },
+                    { type: 'line', title: 'Drift score', color: '#ff9830', values: [0.12, 0.14, 0.11, 0.18, 0.16, 0.13, 0.1, 0.15, 0.09, 0.08] }
+                ]
+            },
+            {
+                id: 'model-quality',
+                name: 'Model Quality',
+                folder: 'Machine Learning',
+                tags: ['ml', 'quality'],
+                panels: [
+                    { type: 'stat', title: 'F1 score', value: '0.91' },
+                    { type: 'stat', title: 'Precision', value: '0.94' },
+                    { type: 'stat', title: 'Recall', value: '0.88' },
+                    { type: 'stat', title: 'Labeled rows', value: '18k' },
+                    { type: 'line', title: 'F1 over time', color: '#73bf69', values: [0.72, 0.75, 0.78, 0.8, 0.83, 0.86, 0.87, 0.89, 0.9, 0.91] },
+                    { type: 'bar', title: 'Error types', color: '#ff9830', values: [12, 8, 5, 3, 2] }
+                ]
+            },
+            {
+                id: 'pipeline-health',
+                name: 'Data Pipeline Health',
+                folder: 'Analytics',
+                tags: ['pipelines'],
+                panels: [
+                    { type: 'stat', title: 'Jobs succeeding', value: '98%' },
+                    { type: 'stat', title: 'Failed today', value: '3' },
+                    { type: 'line', title: 'Rows ingested', color: '#5794f2', values: [80, 90, 88, 110, 140, 130, 150, 170, 160, 190] },
+                    { type: 'line', title: 'Lag minutes', color: '#b877d9', values: [12, 10, 11, 8, 7, 9, 6, 5, 6, 4] }
+                ]
+            },
+            {
+                id: 'experiment-tracker',
+                name: 'Experiment Tracker',
+                folder: 'Research',
+                tags: ['experiments'],
+                panels: [
+                    { type: 'stat', title: 'Experiments', value: '42' },
+                    { type: 'stat', title: 'Best lift', value: '+6.4%' },
+                    { type: 'line', title: 'Validation loss', color: '#ff9830', values: [0.82, 0.74, 0.69, 0.61, 0.58, 0.52, 0.49, 0.45, 0.43, 0.4] },
+                    { type: 'bar', title: 'Trials', color: '#73bf69', values: [4, 6, 5, 8, 7, 9, 11] }
+                ]
+            }
+        ];
+
+        const DEFAULT_STARRED = ['analytics-overview', 'model-quality'];
+        const STAR_KEY = 'portfolio-dashboard-stars';
+        const params = new URLSearchParams(location.search);
+        let starredOnly = params.has('starred');
+        let query = '';
+        let activeTag = '';
+        let openId = params.get('dashboard');
+
+        function loadStarred() {
+            const raw = localStorage.getItem(STAR_KEY);
+            if (!raw) return new Set(DEFAULT_STARRED);
+            try {
+                return new Set(JSON.parse(raw));
+            } catch {
+                return new Set(DEFAULT_STARRED);
+            }
+        }
+
+        let starred = loadStarred();
+
+        function saveStarred() {
+            localStorage.setItem(STAR_KEY, JSON.stringify([...starred]));
+        }
+
+        function syncUrl() {
+            const next = new URLSearchParams();
+            if (starredOnly) next.set('starred', '');
+            if (openId) next.set('dashboard', openId);
+            const search = next.toString().replace(/=(?=&|$)/g, '');
+            history.replaceState({}, '', search ? `?${search}` : location.pathname);
+        }
+
+        function visibleDashboards() {
+            const needle = query.trim().toLowerCase();
+            return dashboards.filter((dashboard) => {
+                if (starredOnly && !starred.has(dashboard.id)) return false;
+                if (activeTag && !dashboard.tags.includes(activeTag)) return false;
+                if (!needle) return true;
+                const panelTitles = dashboard.panels.map((panel) => panel.title).join(' ');
+                const haystack = `${dashboard.name} ${dashboard.folder} ${dashboard.tags.join(' ')} ${panelTitles}`.toLowerCase();
+                return haystack.includes(needle);
+            });
+        }
+
+        function renderTags() {
+            const tags = [...new Set(dashboards.flatMap((dashboard) => dashboard.tags))];
+            document.getElementById('tag-row').innerHTML = tags.map((tag) => `
+                <button class="tag-chip ${tag === activeTag ? 'is-on' : ''}" type="button" data-tag="${tag}">${tag}</button>
+            `).join('');
+        }
+
+        function renderList() {
+            const results = document.getElementById('dashboard-results');
+            const rows = visibleDashboards();
+            if (!rows.length) {
+                results.innerHTML = `
+                    <div class="dashboards-empty">
+                        <p>${starredOnly ? 'No starred dashboards yet.' : 'No dashboards match that search.'}</p>
+                    </div>`;
+                return;
+            }
+            results.innerHTML = `<div class="dashboard-list">${rows.map((dashboard) => `
+                <div class="dashboard-row" data-id="${dashboard.id}">
+                    <button class="star-button ${starred.has(dashboard.id) ? 'is-starred' : ''}" type="button" data-star="${dashboard.id}" aria-label="${starred.has(dashboard.id) ? 'Unstar' : 'Star'} ${dashboard.name}" aria-pressed="${starred.has(dashboard.id)}">${starred.has(dashboard.id) ? '★' : '☆'}</button>
+                    <span class="dashboard-name">${dashboard.name}</span>
+                    <span class="dashboard-folder">${dashboard.folder}</span>
+                    <span class="dashboard-tags">${dashboard.tags.join(' · ')}</span>
+                </div>
+            `).join('')}</div>`;
+        }
+
+        function drawChart(canvas, values, color, kind) {
+            const rect = canvas.getBoundingClientRect();
+            const dpr = window.devicePixelRatio || 1;
+            canvas.width = Math.max(1, rect.width) * dpr;
+            canvas.height = Math.max(1, rect.height) * dpr;
+            const ctx = canvas.getContext('2d');
+            ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+            const width = rect.width;
+            const height = rect.height;
+            const min = Math.min(...values);
+            const max = Math.max(...values);
+            const span = max - min || 1;
+            const pad = 12;
+            ctx.clearRect(0, 0, width, height);
+            ctx.strokeStyle = 'rgba(204, 204, 220, 0.15)';
+            ctx.lineWidth = 1;
+            for (let i = 0; i < 4; i += 1) {
+                const y = pad + ((height - pad * 2) / 3) * i;
+                ctx.beginPath();
+                ctx.moveTo(pad, y);
+                ctx.lineTo(width - pad, y);
+                ctx.stroke();
+            }
+            const points = values.map((value, index) => {
+                const x = pad + (index / (values.length - 1 || 1)) * (width - pad * 2);
+                const y = height - pad - ((value - min) / span) * (height - pad * 2);
+                return [x, y];
+            });
+            ctx.strokeStyle = color;
+            ctx.fillStyle = color;
+            ctx.lineWidth = 2;
+            if (kind === 'bar') {
+                const barWidth = (width - pad * 2) / values.length * 0.6;
+                points.forEach(([x, y]) => {
+                    ctx.fillRect(x - barWidth / 2, y, barWidth, height - pad - y);
+                });
+                return;
+            }
+            ctx.beginPath();
+            points.forEach(([x, y], index) => {
+                if (index === 0) ctx.moveTo(x, y);
+                else ctx.lineTo(x, y);
+            });
+            ctx.stroke();
+        }
+
+        function renderBoard() {
+            const dashboard = dashboards.find((item) => item.id === openId);
+            const browser = document.getElementById('browser');
+            const board = document.getElementById('board');
+            if (!dashboard) {
+                board.hidden = true;
+                browser.hidden = false;
+                return;
+            }
+            browser.hidden = true;
+            board.hidden = false;
+            document.getElementById('board-name').textContent = dashboard.name;
+            const star = document.getElementById('board-star');
+            const on = starred.has(dashboard.id);
+            star.textContent = on ? '★' : '☆';
+            star.classList.toggle('is-starred', on);
+            star.setAttribute('aria-pressed', String(on));
+            star.setAttribute('aria-label', `${on ? 'Unstar' : 'Star'} ${dashboard.name}`);
+            document.getElementById('panel-grid').innerHTML = dashboard.panels.map((panel, index) => {
+                if (panel.type === 'stat') {
+                    return `<article class="panel panel-stat"><h2>${panel.title}</h2><div class="panel-value">${panel.value}</div></article>`;
+                }
+                return `<article class="panel panel-chart"><h2>${panel.title}</h2><canvas data-chart="${index}"></canvas></article>`;
+            }).join('');
+            requestAnimationFrame(() => {
+                dashboard.panels.forEach((panel, index) => {
+                    if (panel.type === 'stat') return;
+                    const canvas = document.querySelector(`[data-chart="${index}"]`);
+                    if (canvas) drawChart(canvas, panel.values, panel.color, panel.type);
+                });
+            });
+        }
+
+        function render() {
+            document.getElementById('starred-filter').classList.toggle('is-on', starredOnly);
+            document.getElementById('starred-filter').setAttribute('aria-pressed', String(starredOnly));
+            renderTags();
+            renderList();
+            renderBoard();
+            syncUrl();
+        }
+
+        document.getElementById('dashboard-search').addEventListener('input', (event) => {
+            query = event.target.value;
+            renderList();
+        });
+
+        document.getElementById('starred-filter').addEventListener('click', () => {
+            starredOnly = !starredOnly;
+            openId = null;
+            render();
+        });
+
+        document.getElementById('tag-row').addEventListener('click', (event) => {
+            const button = event.target.closest('[data-tag]');
+            if (!button) return;
+            activeTag = activeTag === button.dataset.tag ? '' : button.dataset.tag;
+            render();
+        });
+
+        document.getElementById('dashboard-results').addEventListener('click', (event) => {
+            const starButton = event.target.closest('[data-star]');
+            if (starButton) {
+                event.stopPropagation();
+                const id = starButton.dataset.star;
+                if (starred.has(id)) starred.delete(id);
+                else starred.add(id);
+                saveStarred();
+                render();
+                return;
+            }
+            const row = event.target.closest('[data-id]');
+            if (!row) return;
+            openId = row.dataset.id;
+            render();
+        });
+
+        document.getElementById('board-back').addEventListener('click', () => {
+            openId = null;
+            render();
+        });
+
+        document.getElementById('board-star').addEventListener('click', () => {
+            if (!openId) return;
+            if (starred.has(openId)) starred.delete(openId);
+            else starred.add(openId);
+            saveStarred();
+            render();
+        });
+
+        render();
+    </script>
+</body>
+</html>

@@ -83,7 +83,7 @@ img {
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 2rem;
+    gap: 1.25rem;
 }
 
 .nav-link {
@@ -2292,6 +2292,239 @@ section {
 
     .frame img {
         height: 160px;
+    }
+}
+
+.dashboards-page {
+    min-height: 100vh;
+    padding: 96px 24px 48px;
+    background: #111217;
+    color: #ccccdc;
+}
+
+.dashboards-shell {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.dashboards-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.dashboards-header h1 {
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+.dashboards-header p {
+    color: #8e8ea8;
+    margin-top: 0.25rem;
+}
+
+.dashboards-toolbar {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.dashboards-search {
+    flex: 1;
+    min-width: 220px;
+    background: #181b1f;
+    border: 1px solid #2c3235;
+    color: #ccccdc;
+    border-radius: 4px;
+    padding: 0.65rem 0.8rem;
+    font: inherit;
+}
+
+.dashboards-search:focus {
+    outline: 2px solid #3d71d9;
+    border-color: transparent;
+}
+
+.starred-toggle,
+.dashboard-back,
+.panel-link {
+    border: 1px solid #2c3235;
+    background: #181b1f;
+    color: #ccccdc;
+    border-radius: 4px;
+    padding: 0.6rem 0.9rem;
+    font: inherit;
+    cursor: pointer;
+}
+
+.starred-toggle.is-on,
+.tag-chip.is-on {
+    border-color: #ff9830;
+    color: #ffb357;
+}
+
+.tag-row {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 1rem;
+}
+
+.tag-chip {
+    border: 1px solid #2c3235;
+    background: transparent;
+    color: #8e8ea8;
+    border-radius: 999px;
+    padding: 0.25rem 0.7rem;
+    font: inherit;
+    cursor: pointer;
+}
+
+.dashboard-list {
+    border: 1px solid #2c3235;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.dashboard-row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 44px 1.4fr 0.8fr 1fr;
+    gap: 0.75rem;
+    align-items: center;
+    text-align: left;
+    background: #181b1f;
+    color: inherit;
+    border: 0;
+    border-bottom: 1px solid #2c3235;
+    padding: 0.9rem 0.8rem;
+    font: inherit;
+    cursor: pointer;
+}
+
+.dashboard-row:last-child {
+    border-bottom: 0;
+}
+
+.dashboard-row:hover {
+    background: #22252b;
+}
+
+.dashboard-name {
+    color: #6e9fff;
+    font-weight: 500;
+}
+
+.dashboard-folder,
+.dashboard-tags {
+    color: #8e8ea8;
+}
+
+.star-button {
+    width: 32px;
+    height: 32px;
+    border: 0;
+    background: transparent;
+    color: #6e6e80;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.star-button.is-starred {
+    color: #ff9830;
+}
+
+.dashboards-empty {
+    padding: 2.5rem 1rem;
+    text-align: center;
+    color: #8e8ea8;
+    background: #181b1f;
+    border: 1px solid #2c3235;
+    border-radius: 6px;
+}
+
+.board-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.board-title {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.board-title h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+.panel-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem;
+}
+
+.panel {
+    background: #181b1f;
+    border: 1px solid #2c3235;
+    border-radius: 4px;
+    padding: 0.8rem;
+    min-height: 120px;
+}
+
+.panel-stat {
+    grid-column: span 1;
+}
+
+.panel-chart {
+    grid-column: span 2;
+    min-height: 220px;
+}
+
+.panel h2 {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #8e8ea8;
+    margin-bottom: 0.6rem;
+}
+
+.panel-value {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 500;
+}
+
+.panel canvas {
+    width: 100%;
+    height: 160px;
+    display: block;
+}
+
+@media (max-width: 800px) {
+    .dashboard-row {
+        grid-template-columns: 44px 1fr;
+    }
+
+    .dashboard-folder,
+    .dashboard-tags {
+        display: none;
+    }
+
+    .panel-grid,
+    .panel-chart,
+    .panel-stat {
+        grid-template-columns: 1fr;
+        grid-column: auto;
     }
 }
 
