@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="grafana-app">
-    <div class="grafana-shell">
-        <aside id="side" class="grafana-side" aria-label="Main menu"></aside>
-        <div class="grafana-main">
-            <header class="grafana-top">
-                <button class="grafana-mark" id="menu-toggle" type="button" aria-label="Open menu"></button>
-                <button class="icon-button" id="menu-toggle-2" type="button" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
+<body class="dash-app">
+    <div class="dash-shell">
+        <aside id="side" class="dash-side" aria-label="Main menu"></aside>
+        <div class="dash-main">
+            <header class="dash-top">
+                <button class="icon-button" id="menu-toggle" type="button" aria-label="Toggle navigation"><i class="fas fa-bars"></i></button>
                 <span class="crumb" id="crumb">Starred</span>
                 <button class="icon-button" id="focus-search" type="button" aria-label="Search"><i class="fas fa-magnifying-glass"></i></button>
                 <div class="plus-wrap">
@@ -28,7 +27,7 @@
                 <button class="icon-button" id="help-button" type="button" aria-label="Help"><i class="fas fa-circle-question"></i></button>
                 <button class="signin-link" id="signin-button" type="button">Sign in</button>
             </header>
-            <div class="grafana-content" id="content"></div>
+            <div class="dash-content" id="content"></div>
         </div>
     </div>
     <dialog id="app-dialog" class="dialog-card"></dialog>
@@ -68,7 +67,7 @@
             { id: 'model-quality', name: 'Model Quality', folder: 'Machine Learning', tags: ['ml', 'quality'], owner: 'Manasa', starred: false, views: 430, views30: 80, errors: 1, errors30: 0, panels: [['F1 score', '0.91'], ['Precision', '0.94'], ['F1 over time', [0.72, 0.78, 0.82, 0.86, 0.89, 0.9, 0.91]]] },
             { id: 'pipeline-health', name: 'Data Pipeline Health', folder: 'Analytics', tags: ['pipelines'], owner: 'Team', starred: false, views: 990, views30: 300, errors: 9, errors30: 3, panels: [['Jobs succeeding', '98%'], ['Failed today', '3'], ['Rows ingested', [80, 100, 90, 130, 150, 140, 180]]] }
         ];
-        const KEY = 'portfolio-grafana-browser-v1';
+        const KEY = 'portfolio-dashboard-browser-v1';
         const saved = JSON.parse(localStorage.getItem(KEY) || 'null');
         let boards = saved?.boards || SEED;
         let deleted = saved?.deleted || [];
@@ -236,7 +235,7 @@
         function rowHtml(rows) {
             return rows.map((board) => `
                 <div class="board-row">
-                    <button class="icon-button" type="button" data-star="${board.id}" aria-label="Star ${board.name}" style="color:${board.starred ? '#ff9830' : '#6e6e80'}">${board.starred ? '★' : '☆'}</button>
+                    <button class="icon-button" type="button" data-star="${board.id}" aria-label="Star ${board.name}" style="color:${board.starred ? '#f5c451' : '#6e6e80'}">${board.starred ? '★' : '☆'}</button>
                     <button class="board-open" type="button" data-open="${board.id}">${board.name}</button>
                     <span class="meta">${board.folder}</span>
                     <span class="meta">${board.tags.join(' · ')} · ${board.views} views</span>
@@ -349,7 +348,7 @@
         }
 
         function openSignIn() {
-            openDialog('Sign in', '<p>This browser is a portfolio demo. There is no account to create, and nothing is sent to Grafana.</p>');
+            openDialog('Sign in', '<p>This is a portfolio demo. There is no account to create.</p>');
         }
 
         function openCreate(kind) {
@@ -384,7 +383,6 @@
             else side.classList.toggle('is-collapsed');
         }
         document.getElementById('menu-toggle').onclick = toggleSide;
-        document.getElementById('menu-toggle-2').onclick = toggleSide;
         document.getElementById('focus-search').onclick = () => document.getElementById('search')?.focus();
         document.getElementById('plus-button').onclick = (event) => {
             event.stopPropagation();
@@ -412,7 +410,7 @@
             if (sortMenu) sortMenu.hidden = true;
         });
         const sideStyle = document.createElement('style');
-        sideStyle.textContent = '.grafana-side.is-collapsed{display:none}';
+        sideStyle.textContent = '.dash-side.is-collapsed{display:none}';
         document.head.appendChild(sideStyle);
         render();
     </script>

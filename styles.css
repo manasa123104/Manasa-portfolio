@@ -2299,19 +2299,19 @@ section {
     }
 }
 
-.grafana-app {
+.dash-app {
     margin: 0;
     background: #111217;
     color: #ccccdc;
     overflow: hidden;
 }
 
-.grafana-app .grafana-shell {
+.dash-app .dash-shell {
     display: flex;
     height: 100vh;
 }
 
-.grafana-side {
+.dash-side {
     width: 300px;
     flex: none;
     background: #181b1f;
@@ -2320,8 +2320,8 @@ section {
     padding: 0.4rem 0 1rem;
 }
 
-.grafana-side a,
-.grafana-side button.nav-item {
+.dash-side a,
+.dash-side button.nav-item {
     width: 100%;
     display: flex;
     align-items: center;
@@ -2337,13 +2337,13 @@ section {
     cursor: pointer;
 }
 
-.grafana-side button.nav-item.is-active {
+.dash-side button.nav-item.is-active {
     background: #22252b;
-    border-left-color: #ff8833;
+    border-left-color: #3d71d9;
 }
 
-.grafana-side button.nav-item:hover,
-.grafana-side a:hover {
+.dash-side button.nav-item:hover,
+.dash-side a:hover {
     background: #22252b;
 }
 
@@ -2356,14 +2356,14 @@ section {
     padding: 0.05rem 0.45rem;
 }
 
-.grafana-main {
+.dash-main {
     flex: 1;
     min-width: 0;
     display: flex;
     flex-direction: column;
 }
 
-.grafana-top {
+.dash-top {
     height: 52px;
     display: flex;
     align-items: center;
@@ -2371,14 +2371,6 @@ section {
     padding: 0 0.6rem;
     border-bottom: 1px solid #2c3235;
     background: #111217;
-}
-
-.grafana-mark {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: radial-gradient(circle at 40% 40%, #ffb357, #ff8833 55%, #e5541c);
-    border: 0;
 }
 
 .icon-button,
@@ -2458,7 +2450,7 @@ section {
     position: relative;
 }
 
-.grafana-content {
+.dash-content {
     overflow: auto;
     padding: 0.8rem 1.25rem 2rem;
 }
@@ -2660,8 +2652,8 @@ section {
 .panel canvas { width: 100%; height: 150px; display: block; }
 
 @media (max-width: 800px) {
-    .grafana-side { display: none; }
-    .grafana-side.is-open {
+    .dash-side { display: none; }
+    .dash-side.is-open {
         display: block;
         position: fixed;
         z-index: 30;
