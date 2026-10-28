@@ -2219,6 +2219,10 @@ section {
     display: block;
 }
 
+.frame img.frame-focus-lower {
+    object-position: center 78%;
+}
+
 .frame span {
     display: block;
     margin-top: 0.6rem;
