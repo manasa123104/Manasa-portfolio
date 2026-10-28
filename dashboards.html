@@ -258,8 +258,14 @@
             const sortMenu = document.getElementById('sort-menu');
             sortButton.onclick = (event) => {
                 event.stopPropagation();
-                sortMenu.hidden = !sortMenu.hidden;
-                sortButton.setAttribute('aria-expanded', String(!sortMenu.hidden));
+                const open = sortMenu.hidden;
+                sortMenu.hidden = !open;
+                if (open) {
+                    const rect = sortButton.getBoundingClientRect();
+                    sortMenu.style.top = `${rect.bottom + 4}px`;
+                    sortMenu.style.left = `${rect.left}px`;
+                }
+                sortButton.setAttribute('aria-expanded', String(open));
             };
             sortMenu.querySelectorAll('[data-sort]').forEach((button) => {
                 button.onclick = () => { sort = button.dataset.sort; render(); };
@@ -383,7 +389,13 @@
         document.getElementById('plus-button').onclick = (event) => {
             event.stopPropagation();
             const menu = document.getElementById('plus-menu');
-            menu.hidden = !menu.hidden;
+            const open = menu.hidden;
+            menu.hidden = !open;
+            if (open) {
+                const rect = event.currentTarget.getBoundingClientRect();
+                menu.style.top = `${rect.bottom + 4}px`;
+                menu.style.left = `${Math.max(8, rect.right - 240)}px`;
+            }
         };
         document.getElementById('plus-menu').querySelectorAll('[data-create]').forEach((button) => {
             button.onclick = () => {

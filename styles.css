@@ -2410,17 +2410,21 @@ section {
 
 .signin-link {
     color: #ccccdc;
+    background: transparent;
+    border: 0;
     text-decoration: none;
     padding: 0.35rem 0.6rem;
 }
 
 .popover {
-    position: absolute;
-    z-index: 20;
+    position: fixed;
+    z-index: 40;
     background: #22252b;
     border: 1px solid #2c3235;
     border-radius: 6px;
-    min-width: 220px;
+    min-width: 240px;
+    max-height: 320px;
+    overflow: auto;
     padding: 0.35rem;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
 }
