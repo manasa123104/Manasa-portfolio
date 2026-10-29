@@ -592,6 +592,8 @@ section {
 
 .about-content {
     max-width: 46rem;
+    margin-inline: auto;
+    text-align: center;
 }
 
 .about-text h3 {
@@ -617,6 +619,7 @@ section {
 
 .about-stats {
     display: flex;
+    justify-content: center;
     gap: 2rem;
     margin-top: 2rem;
 }
