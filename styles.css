@@ -2188,8 +2188,9 @@ section {
     .nav-link {
         padding: 0.75rem 0;
         min-height: 44px;
-        display: flex;
+        display: inline-flex;
         align-items: center;
+        width: auto;
     }
     
     /* Better text readability on mobile */
