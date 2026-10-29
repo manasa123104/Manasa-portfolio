@@ -189,3 +189,14 @@ if (lightbox) {
     });
 }
 
+const topButton = document.createElement('button');
+topButton.className = 'to-top';
+topButton.type = 'button';
+topButton.setAttribute('aria-label', 'Back to top');
+topButton.innerHTML = '<i class="fas fa-arrow-up"></i>';
+document.body.appendChild(topButton);
+topButton.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+window.addEventListener('scroll', () => {
+    topButton.classList.toggle('is-visible', window.scrollY > 700);
+});
+
