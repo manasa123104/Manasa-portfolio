@@ -111,6 +111,7 @@ img {
 }
 
 .nav-link {
+    display: inline-block;
     text-decoration: none;
     color: var(--text-primary);
     font-weight: 500;
@@ -593,7 +594,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    align-items: center;
+    align-items: start;
 }
 
 .about-text h3 {
@@ -642,6 +643,8 @@ section {
 }
 
 .journey-card {
+    position: sticky;
+    top: 100px;
     background: white;
     border-radius: 1.25rem;
     padding: 1.75rem 1.6rem 1.4rem;
