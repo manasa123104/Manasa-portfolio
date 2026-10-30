@@ -339,8 +339,14 @@ img {
 .hero-subtitle {
     font-size: 1.5rem;
     color: var(--text-secondary);
+    margin-bottom: 0.35rem;
+    min-height: 2.2rem;
+}
+
+.hero-now {
     margin-bottom: 1rem;
-    min-height: 2rem;
+    color: var(--text-primary);
+    font-weight: 600;
 }
 
 .typing-text {

@@ -43,38 +43,19 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
-// Typing animation
+// Show each role in full, then move to the next one.
 const typingText = document.querySelector('.typing-text');
 const texts = ['Data Analytics Engineer', 'Machine Learning Enthusiast', 'Full-Stack Developer', 'Research Assistant'];
 let textIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
 
-function typeText() {
-    const currentText = texts[textIndex];
-    
-    if (isDeleting) {
-        typingText.textContent = currentText.substring(0, charIndex - 1);
-        charIndex--;
-    } else {
-        typingText.textContent = currentText.substring(0, charIndex + 1);
-        charIndex++;
-    }
-    
-    if (!isDeleting && charIndex === currentText.length) {
-        setTimeout(() => isDeleting = true, 2000);
-    } else if (isDeleting && charIndex === 0) {
-        isDeleting = false;
-        textIndex = (textIndex + 1) % texts.length;
-    }
-    
-    const speed = isDeleting ? 50 : 100;
-    setTimeout(typeText, speed);
+function showRole() {
+    typingText.textContent = texts[textIndex];
+    textIndex = (textIndex + 1) % texts.length;
 }
 
-// Start typing animation
 if (typingText) {
-    typeText();
+    showRole();
+    setInterval(showRole, 2800);
 }
 
 // Intersection Observer for animations
