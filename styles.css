@@ -370,6 +370,30 @@ img {
     line-height: 1.8;
 }
 
+.strong-points {
+    list-style: none;
+    display: grid;
+    gap: 0.45rem;
+    margin: 0 0 1.25rem;
+}
+
+.strong-points li {
+    color: var(--text-primary);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.strong-points li::before {
+    content: "";
+    display: inline-block;
+    width: 0.45rem;
+    height: 0.45rem;
+    margin-right: 0.55rem;
+    border-radius: 50%;
+    background: var(--primary-color);
+    transform: translateY(-1px);
+}
+
 .hero-location {
     font-size: 1rem;
     color: var(--text-secondary);
