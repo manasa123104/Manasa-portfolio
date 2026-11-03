@@ -682,31 +682,6 @@ section {
     font-weight: 600;
 }
 
-.about-stats {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.stat-item {
-    text-align: center;
-}
-
-.stat-number {
-    font-size: 2.5rem;
-    font-weight: 700;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.stat-label {
-    color: var(--text-secondary);
-    font-size: 0.875rem;
-}
-
 .image-placeholder {
     font-size: 5rem;
     color: white;
@@ -1857,19 +1832,6 @@ section {
     .cert-details span {
         display: block;
         margin-bottom: 0.5rem;
-    }
-    
-    .about-stats {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-    
-    .stat-item {
-        width: 100%;
-    }
-    
-    .stat-number {
-        font-size: 2rem !important;
     }
     
     /* Touch-friendly buttons */
