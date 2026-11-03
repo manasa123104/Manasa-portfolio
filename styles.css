@@ -397,11 +397,27 @@ img {
 .hero-location {
     font-size: 1rem;
     color: var(--text-secondary);
-    margin-bottom: 2rem;
+    margin-bottom: 0.65rem;
     display: flex;
     align-items: center;
     gap: 1rem;
     flex-wrap: wrap;
+}
+
+.hero-story-lead {
+    margin: 0 0 1.75rem;
+    font-size: 1rem;
+}
+
+.hero-story-lead a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.hero-story-lead a:hover,
+.hero-story-lead a:focus-visible {
+    text-decoration: underline;
 }
 
 .hero-location i {
