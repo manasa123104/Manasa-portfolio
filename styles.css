@@ -35,13 +35,17 @@ section[id] {
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-family: "Times New Roman", Times, serif;
     line-height: 1.6;
     color: var(--text-primary);
     background-color: var(--bg-primary);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Times New Roman", Times, serif;
 }
 
 img {
@@ -314,9 +318,9 @@ img {
 }
 
 .hero-title {
-    font-size: 2.75rem;
-    font-weight: 800;
-    line-height: 1.2;
+    font-size: 2.15rem;
+    font-weight: 700;
+    line-height: 1.25;
     margin-bottom: 1rem;
 }
 
@@ -898,7 +902,7 @@ section {
 .cert-id {
     font-size: 0.7rem;
     color: var(--text-light);
-    font-family: monospace;
+    font-family: "Times New Roman", Times, serif;
     display: block;
     margin-top: 0.25rem;
     word-break: break-all;
@@ -2302,7 +2306,7 @@ section {
     display: block;
     margin-top: 0.6rem;
     text-align: center;
-    font-family: Palatino, "Palatino Linotype", Georgia, serif;
+    font-family: "Times New Roman", Times, serif;
     color: #6b5b4b;
     font-size: 0.95rem;
 }
@@ -2344,7 +2348,7 @@ section {
     color: #fff;
     text-align: center;
     margin-top: 0.8rem;
-    font-family: Palatino, Georgia, serif;
+    font-family: "Times New Roman", Times, serif;
 }
 
 .lightbox-close {
