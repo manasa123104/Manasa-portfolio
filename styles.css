@@ -412,7 +412,10 @@ img {
 }
 
 .hero-story-lead {
-    margin: 0 0 1.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.35rem;
+    margin: 0 0 1.5rem;
     font-size: 1rem;
 }
 
@@ -434,7 +437,16 @@ img {
 .hero-buttons {
     display: flex;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.9rem;
+    flex-wrap: wrap;
+}
+
+.experience-actions {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 4rem;
 }
 
 .btn {
