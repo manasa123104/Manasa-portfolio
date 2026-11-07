@@ -2482,3 +2482,29 @@ button, input, select, textarea {
 .hero .hero-subtitle { font-size: clamp(1.05rem, 1.7vw, 1.2rem) !important; min-height: 1.6rem; }
 .hero .hero-summary { gap: 0.5rem; }
 .hero .hero-summary li { font-size: clamp(1.05rem, 1.5vw, 1.1rem); line-height: 1.5; }
+
+
+/* A shared, consistent size for regular portfolio text on every viewport. */
+:root { --portfolio-text-size: 13px; }
+body p, body li, body blockquote, body cite, body label,
+body input, body select, body textarea,
+body .hero .hero-subtitle, body .hero .hero-summary li,
+body .hero-description, body .hero-location, body .hero-story-lead,
+body .section-subtitle, body .about-quote p, body .about-quote cite, body .about-text p,
+body .education-date, body .education-school, body .education-location,
+body .experience-date, body .experience-company, body .experience-location,
+body .experience-description, body .experience-achievements li,
+body .timeline-date, body .timeline-company, body .timeline-description,
+body .timeline-skills li, body .skill-badge,
+body .project-date, body .project-org, body .project-badge,
+body .project-description, body .project-card-large .project-description,
+body .tech-tag, body .project-link,
+body .cert-card p, body .cert-issuer, body .cert-details,
+body .cert-date, body .cert-id, body .cert-duration, body .cert-rank, body .cert-link,
+body .honor-org, body .honor-date, body .honor-description,
+body .gallery-kicker, body .gallery-filter, body .frame span, body .lightbox figcaption,
+body .nav-link, body .btn, body .form-group label,
+body .form-group input, body .form-group textarea, body .contact-method p {
+    font-size: var(--portfolio-text-size) !important;
+    line-height: 1.6;
+}
