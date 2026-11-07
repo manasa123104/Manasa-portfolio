@@ -5,27 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manasa Rajagopal Madabushi — Resume</title>
     <style>
-        @page { size: letter; margin: 0.64in; }
+        @page { size: letter; margin: 0.45in; }
         * { box-sizing: border-box; }
         body {
             margin: 0;
             color: #1f2430;
             font-family: "Times New Roman", Times, serif;
-            font-size: 12px;
-            line-height: 1.4;
+            font-size: 13px;
+            line-height: 1.22;
             background: #e7e9ee;
         }
         main {
             max-width: 8.5in;
             margin: 0 auto;
             background: white;
-            padding: 0.64in;
+            padding: 0.45in;
         }
         h1, h2 { font-family: "Times New Roman", Times, serif; }
         h1 { font-size: 22px; margin: 0; letter-spacing: 0.01em; }
         h2 {
             font-size: 12.5px;
-            margin: 11px 0 4px;
+            margin: 8px 0 3px;
             text-transform: uppercase;
             letter-spacing: 0.06em;
             color: #4338ca;
@@ -36,20 +36,20 @@
         .role { margin: 3px 0 4px; font-weight: 600; }
         .contact { color: #4b5563; margin-top: 2px; }
         .contact span + span::before { content: " · "; }
-        .item { margin-bottom: 8px; }
+        .item { margin-bottom: 5px; }
         .line { display: flex; justify-content: space-between; gap: 12px; }
         .where { color: #4b5563; white-space: nowrap; }
         ul, ol { margin: 1px 0 0; padding-left: 16px; }
         li { margin: 0; }
         .skills p { margin: 0 0 1px; }
-        .resume-certifications { margin-top: 24px; }
-        .credential-list { list-style: none; padding: 0; }
-        .credential-list li { margin-bottom: 7px; break-inside: avoid; font-size: 10.5px; line-height: 1.25; }
-        .credential-list strong { font-size: 11px; }
+        .resume-certifications { margin-top: 0; }
+        .credential-list { list-style: none; padding: 0; columns: 2; column-gap: 22px; }
+        .credential-list li { margin-bottom: 4px; break-inside: avoid; font-size: 11.5px; line-height: 1.18; }
+        .credential-list strong { font-size: inherit; font-weight: 400; }
         .credential-list p { margin: 2px 0 0; overflow-wrap: anywhere; }
         .credential-list a { color: inherit; }
         @media print {
-            .resume-certifications { break-before: page; margin-top: 0; }
+            .resume-certifications { margin-top: 0; }
             .resume-certifications h2 { margin-top: 0; }
             .item { break-inside: avoid; }
             h2 { break-after: avoid; }
@@ -76,28 +76,22 @@
         </p>
 
         <h2>Summary</h2>
-        <p>
-            Software engineer focused on data analytics, artificial intelligence, and machine learning.
-            Master of Science in Data Analytics Engineering from George Mason University, with experience
-            building software, supporting NASA Earth Science research through GeoWeaver, and completing
-            an AI/ML engineering internship at Giggso.
-        </p>
+        <p>Data analytics and AI engineer with an M.S. in Data Analytics Engineering from George Mason University. Experience in agentic AI, machine learning, backend development, and GeoWeaver research supporting NASA Earth Science.</p>
 
 <h2>Experience</h2>
         <div class="item">
             <div class="line">
                 <strong>AI Intern, Strong Point</strong>
-                <span class="where">January 2026 – October 2026</span>
+                <span class="where">Jan 2026 - Oct 2026</span>
             </div>
             <ul>
-                <li>Contributed to an agentic AI-powered platform: developed and enhanced the multi-bot chatbot architecture, repository-scale code conversion, multi-stage processing pipelines, GitHub integration, Data Analyst capabilities, and Model Context Protocol (MCP) integration.</li>
-                <li>Contributed to the platform's functionality, usability, and user experience.</li>
+                <li>Developed multi-bot chatbots, repository-scale code conversion, processing pipelines, and GitHub, Data Analyst, and MCP integrations for an agentic AI platform.</li>
             </ul>
         </div>
         <div class="item">
             <div class="line">
                 <strong>AIML Engineer Intern, Giggso Inc. — United States</strong>
-                <span class="where">March 2026 – September 2026</span>
+                <span class="where">Mar 2026 - Sep 2026</span>
             </div>
             <ul>
                 <li>Contributed to team projects and gained practical experience in AI and ML Ops.</li>
@@ -109,8 +103,8 @@
                 <span class="where">Feb 2024 – Jun 2024</span>
             </div>
             <ul>
-                <li>Collaborated with Prof. Ziheng Sun on the GeoWeaver Earth AI workflow system using Python and JavaScript.</li>
-                <li>Prepared reports for NASA Earth Science Data Systems meetings and improved geospatial pipeline integration.</li>
+                <li>Built GeoWeaver Earth AI workflows in Python and JavaScript with Prof. Ziheng Sun.</li>
+                <li>Improved geospatial pipeline integration and prepared NASA Earth Science Data Systems reports.</li>
             </ul>
         </div>
         <div class="item">
@@ -158,11 +152,7 @@
         </div>
 
         <h2>Selected work</h2>
-        <ul>
-            <li>1st place, IntegrityX — financial document integrity platform.</li>
-            <li>GeoWeaver research for NASA Earth Science.</li>
-            <li>15+ projects across analytics and AI.</li>
-        </ul>
+        <p>1st place, IntegrityX financial document integrity platform; 15+ analytics and AI projects.</p>
 
         <h2>Skills</h2>
         <div class="skills">
@@ -173,27 +163,27 @@
         <section class="resume-certifications" aria-labelledby="certifications-title">
             <h2 id="certifications-title">Certifications &amp; Credentials</h2>
             <ul class="credential-list">
-                <li><strong>AWS Certified Generative AI Developer - Professional</strong><p>Amazon Web Services (AWS) | Issued: March 2026 | Expires: March 2029</p></li>
-                <li><strong>Oracle AI Vector Search Professional</strong><p>Oracle | Issued: February 2026 | Expires: February 2028</p></li>
-                <li><strong>ADaSci Certified Forward Deployed Engineer (FDE)</strong><p>ADaSci (Applied Data Science Institute) | Issued: January 13, 2026 | Credential ID: CERT-20260113-0906</p></li>
-                <li><strong>Generative AI Fundamentals</strong><p>Databricks | Issued: December 2025</p></li>
-                <li><strong>Power BI Mastery: Advanced Data Analytics &amp; Visualizations</strong><p>Udemy | Issued: June 6, 2025 | Credential ID: UC-3afe8a64-4e72-4495-9dfa-d9c39aabe833</p></li>
-                <li><strong>Google Data Analytics</strong><p>Coursera | Issued: June 2025 | Credential ID: ZIITWB73HPOR</p></li>
-                <li><strong>ETL in Python and SQL</strong><p>LinkedIn Learning | Issued: February 7, 2025 | Duration: 1h 20m | Credential ID: 3780b1bb64c37376ce23b0a0ca95e996cf9871608190d93681f55f438761557f</p></li>
-                <li><strong>Complete Guide to Power BI for Data Analysts</strong><p>Microsoft Press, LinkedIn Learning | Issued: July 18, 2024 | Duration: 7h 14m | Credential ID: 849b891c7e6ef597b3e7e748b6b204353d7f8f945b8742e5ef8d5b75afb264fe3</p></li>
-                <li><strong>Excel Essential Training (Microsoft 365)</strong><p>LinkedIn Learning | Issued: July 8, 2024 | Duration: 2h 29m | Credential ID: 2b916040f9bf608ee8b09305d5e3db44b90ae908e29d5330be600555b767115e2</p></li>
-                <li><strong>Tableau Essential Training</strong><p>LinkedIn Learning | Issued: July 02, 2024 | Credential ID: 35ade4752a49c74f428166d9c99319d06c62d8a4affde9684c744cf3d11986ab</p></li>
-                <li><strong>AWS Academy Graduate – Cloud Foundations</strong><p>AWS Academy | Issued: 2024 | <a href="https://www.credly.com/badges/9954bcbe-5a38-476f-bb14-59b13dca1432/public_url">Verify credential</a></p></li>
-                <li><strong>Smart Interviews – Smart Coder Certification (Bronze)</strong><p>Smart Interviews | Issued: 2023 | Global Rank: 4710/26963 | <a href="https://smartinterviews.in/certificate/4335c1a4">Verify credential</a></p></li>
-                <li><strong>Digital Skills Readiness Program – Java J2EE</strong><p>Wipro TalentNext | Issued: Oct 2021 | Credential ID: 2021630044</p></li>
-                <li><strong>TASK ML Build-A-Thon – Certificate of Participation</strong><p>TASK ML Build-A-Thon | Issued: June 03, 2021 | Certificate ID: PB-TMLB-2021-636</p></li>
-                <li><strong>Medical Insurance Prediction</strong><p>SmartInternz / SmartBridge | Issued: Jun 03, 2021 | <a href="https://smartinternz.com/badge_projects/certificates/c5ab0bc60ac7929182aadd08703f1ec6">Verify credential</a></p></li>
-                <li><strong>Python Data Structures</strong><p>University of Michigan (Coursera) | Issued: May 17, 2020 | Duration: 19 hours | Credential ID: EC5DNRR8A589</p></li>
-                <li><strong>Career Edge – Knockdown the Lockdown</strong><p>TCS iON | Issued: May 08, 2020 | Credential ID: 4-7529747-1016</p></li>
-                <li><strong>Programming for Everybody (Getting Started with Python)</strong><p>University of Michigan, Coursera | Issued: May 3, 2020 | Credential ID: EBKBNUGJIL0Z</p></li>
-                <li><strong>AI For Everyone</strong><p>deeplearning.ai (Coursera) | Issued: Apr 22, 2020 | Credential ID: UDPB93NQGB95</p></li>
-                <li><strong>Programming in Java</strong><p>NPTEL (IIT Kharagpur) | Issued: Apr 2020 | Credential ID: NPTEL20CS08S1865549</p></li>
-            </ul>
+<li><strong>AWS Certified Generative AI Developer - Professional</strong> - Amazon Web Services (AWS) (2026)</li>
+<li><strong>Oracle AI Vector Search Professional</strong> - Oracle (2026)</li>
+<li><strong>ADaSci Certified Forward Deployed Engineer (FDE)</strong> - ADaSci (Applied Data Science Institute) (2026)</li>
+<li><strong>Generative AI Fundamentals</strong> - Databricks (2025)</li>
+<li><strong>Power BI Mastery: Advanced Data Analytics &amp; Visualizations</strong> - Udemy (2025)</li>
+<li><strong>Google Data Analytics</strong> - Coursera (2025)</li>
+<li><strong>ETL in Python and SQL</strong> - LinkedIn Learning (2025)</li>
+<li><strong>Complete Guide to Power BI for Data Analysts</strong> - Microsoft Press, LinkedIn Learning (2024)</li>
+<li><strong>Excel Essential Training (Microsoft 365)</strong> - LinkedIn Learning (2024)</li>
+<li><strong>Tableau Essential Training</strong> - LinkedIn Learning (2024)</li>
+<li><strong>AWS Academy Graduate – Cloud Foundations</strong> - AWS Academy (2024)</li>
+<li><strong>Smart Interviews – Smart Coder Certification (Bronze)</strong> - Smart Interviews (2023)</li>
+<li><strong>Digital Skills Readiness Program – Java J2EE</strong> - Wipro TalentNext (2021)</li>
+<li><strong>TASK ML Build-A-Thon – Certificate of Participation</strong> - TASK ML Build-A-Thon (2021)</li>
+<li><strong>Medical Insurance Prediction</strong> - SmartInternz / SmartBridge (2021)</li>
+<li><strong>Python Data Structures</strong> - University of Michigan (Coursera) (2020)</li>
+<li><strong>Career Edge – Knockdown the Lockdown</strong> - TCS iON (2020)</li>
+<li><strong>Programming for Everybody (Getting Started with Python)</strong> - University of Michigan, Coursera (2020)</li>
+<li><strong>AI For Everyone</strong> - deeplearning.ai (Coursera) (2020)</li>
+<li><strong>Programming in Java</strong> - NPTEL (IIT Kharagpur) (2020)</li>
+</ul>
         </section>
     </main>
 </body>
