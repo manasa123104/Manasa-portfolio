@@ -2465,3 +2465,8 @@ section {
         height: 160px;
     }
 }
+
+/* Keep native controls consistent without overriding icon fonts. */
+button, input, select, textarea {
+    font-family: "Times New Roman", Times, serif;
+}

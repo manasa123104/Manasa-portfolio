@@ -18,7 +18,7 @@ https://manasa123104.github.io/Manasa-portfolio
 - CSS3 (with CSS Grid and Flexbox)
 - JavaScript (Vanilla JS)
 - Font Awesome Icons
-- Google Fonts (Inter)
+- Times New Roman typography
 
 ## Getting Started
 
