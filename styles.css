@@ -27,6 +27,7 @@
 }
 
 html {
+    font-size: 87.5%;
     scroll-behavior: smooth;
 }
 
@@ -2469,4 +2470,9 @@ section {
 /* Keep native controls consistent without overriding icon fonts. */
 button, input, select, textarea {
     font-family: "Times New Roman", Times, serif;
+}
+
+/* Keep credential details legible within the compact type scale. */
+.cert-date, .cert-id, .cert-duration, .cert-rank {
+    font-size: 12px;
 }
