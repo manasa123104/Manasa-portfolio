@@ -31,9 +31,3 @@ flowchart LR
 </a>
 
 [Open the portfolio](https://manasa123104.github.io/Manasa-portfolio/) if you cannot scan the code.
-
-## AI interview preparation
-
-[100 questions & answers](interview-prep/README.md) · [Searchable guide](https://manasa123104.github.io/Manasa-portfolio/interview-prep.html)
-
-RAG, vector databases, agentic AI, agents, and forward deployed engineering — 20 questions per topic.

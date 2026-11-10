@@ -71,5 +71,3 @@ a:focus-visible, button:focus-visible { outline: 3px solid #8b2854; outline-offs
 }
 
 @media print { body { background: white; color: black; } }
-
-@media (min-width: 769px) { .navbar .nav-menu { flex-wrap: wrap; justify-content: flex-end; row-gap: .25rem; } }
