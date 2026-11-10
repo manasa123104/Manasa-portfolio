@@ -1,4 +1,4 @@
-# Manasa Rajagopal Madabushi
+# Manasa
 
 A responsive portfolio of my work in software engineering, AI, machine learning, and data analytics.
 
