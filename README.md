@@ -1,90 +1,33 @@
-# Manasa Rajagopal Madabushi - Portfolio Website
+# Manasa Rajagopal Madabushi
 
-A modern, responsive portfolio website showcasing my skills, experience, and projects.
-https://manasa123104.github.io/Manasa-portfolio
+A responsive portfolio of my work in software engineering, AI, machine learning, and data analytics.
 
-## Featured project
+**[View live portfolio](https://manasa123104.github.io/Manasa-portfolio/)** · [LinkedIn](https://www.linkedin.com/in/manasa-rajagopal-madabushi-4217461b3) · [Email](mailto:manasamadabushi@gmail.com)
 
-**Mind & Body: Daily Wellness Tracker** combines daily mental wellbeing and health logging with encrypted device accounts, activity tracking, educational resources, and Word/Excel exports.
+## Explore
 
-- [Live wellness app](https://stillwell-wellness-space.naturalbracelet.chatgpt.site/)
-- [Source repository (private)](https://github.com/manasa123104/stillwell)
+Projects, professional experience, education, certifications, resume, and photography.
 
-## Features
+**Featured:** [Mind & Body Wellness Tracker](https://stillwell-wellness-space.naturalbracelet.chatgpt.site/) — encrypted device accounts, wellbeing logs, activity tracking, and Word/Excel exports.
 
-- ✨ Modern and clean design
-- 📱 Fully responsive (mobile, tablet, desktop)
-- 🎨 Beautiful gradient animations
-- ⚡ Smooth scrolling and animations
-- 📧 Contact form
-- 🔗 Social media integration
+## Workflow
 
-## Technologies Used
-
-- HTML5
-- CSS3 (with CSS Grid and Flexbox)
-- JavaScript (Vanilla JS)
-- Font Awesome Icons
-- Times New Roman typography
-
-## Getting Started
-
-1. Open `index.html` in your web browser
-2. That's it! No build process required.
-
-## Customization
-
-### Update Personal Information
-
-1. Edit `index.html` to update:
-   - Name
-   - Bio/Description
-   - Experience details
-   - Projects
-   - Skills
-   - Contact information
-
-### Change Colors
-
-Edit the CSS variables in `styles.css`:
-
-```css
-:root {
-    --primary-color: #6366f1;
-    --secondary-color: #8b5cf6;
-    /* ... more colors */
-}
+```mermaid
+flowchart LR
+    A[Edit HTML CSS and JavaScript] --> B[Preview locally]
+    B --> C[Push to main]
+    C --> D[GitHub Pages builds]
+    D --> E[Live portfolio]
 ```
 
-### Add Projects
+**Stack:** HTML · CSS · JavaScript · Font Awesome
 
-Add new project cards in the projects section:
+**Preview:** Open `index.html` locally. No installation or build step required.
 
-```html
-<div class="project-card">
-    <div class="project-image">
-        <!-- Project image or placeholder -->
-    </div>
-    <div class="project-content">
-        <h3 class="project-title">Project Name</h3>
-        <p class="project-description">Description</p>
-        <!-- ... -->
-    </div>
-</div>
-```
+## Scan to visit
 
+<a href="https://manasa123104.github.io/Manasa-portfolio/">
+  <img src="images/portfolio-qr.png" alt="QR code linking to Manasa's live portfolio" width="220" height="220">
+</a>
 
-
-
-
-
-## Contact
-
-- Email: manasamadabushi@gmail.com
-- LinkedIn: [Manasa Rajagopal Madabushi](https://www.linkedin.com/in/manasa-rajagopal-madabushi-4217461b3)
-- GitHub: [manasa123104](https://github.com/manasa123104)
-
-## License
-
-This portfolio is open source and available for personal use.
-
+[Open the portfolio](https://manasa123104.github.io/Manasa-portfolio/) if you cannot scan the code.
