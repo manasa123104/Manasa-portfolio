@@ -3,6 +3,13 @@
 A modern, responsive portfolio website showcasing my skills, experience, and projects.
 https://manasa123104.github.io/Manasa-portfolio
 
+## Featured project
+
+**Mind & Body: Daily Wellness Tracker** combines daily mental wellbeing and health logging with encrypted device accounts, activity tracking, educational resources, and Word/Excel exports.
+
+- [Live wellness app](https://stillwell-wellness-space.naturalbracelet.chatgpt.site/)
+- [Source repository (private)](https://github.com/manasa123104/stillwell)
+
 ## Features
 
 - ✨ Modern and clean design
