@@ -33,5 +33,17 @@
     "source": "https://music.apple.com/in/album/kabira/1070912669?i=1070912818",
     "artwork": "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/62/d6/74/62d67432-0670-631f-db6a-d4bac3adae4b/8902894353328_cover.jpg/200x200bb.jpg",
     "file": "images/interests/kabira.jpg"
+  },
+  {
+    "title": "Snowball",
+    "source": "https://www.illumination.com/movie/the-secret-life-of-pets/",
+    "artwork": "https://www.illumination.com/wp-content/uploads/2019/11/Pets_Snowball.png",
+    "file": "images/interests/snowball.png"
+  },
+  {
+    "title": "Minion",
+    "source": "https://www.illumination.com/",
+    "artwork": "https://www.illumination.com/wp-content/themes/illumination/assets/images/bumper_minion.png",
+    "file": "images/interests/minion.png"
   }
 ]
